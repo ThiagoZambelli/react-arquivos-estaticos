@@ -56,6 +56,7 @@
   > A biblioteca `react-icons` tras uma variação gigantesca de icones que podem ser utilizados pelo React.
 
   - E.x:
+
   ~~~JavaScript
     <CgSearch 
         size={20}
@@ -63,7 +64,9 @@
       /> 
   ~~~
 
-    - E.x de `import`:  
+
+  - E.x de `import`:
+
   ~~~JavaScript
     import { CgSearch } from 'react-icons/cg' 
   ~~~
