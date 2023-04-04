@@ -47,7 +47,29 @@
 
 &nbsp;
 
+## Normalize.css:
+  > Devido a algum erro na importação do Normalize, foi feito o comando `npm i normalize.css` e em seguida foi importado o mesmo no index.tsx do src, antes do arquivi css normal do index (`import "normalize.css"`);
+
 &nbsp;
+
+## `react-icons`:
+  > A biblioteca `react-icons` tras uma variação gigantesca de icones que podem ser utilizados pelo React.
+
+  - E.x:
+  ~~~JavaScript
+    <CgSearch 
+        size={20}
+        color='#221F3B'
+      /> 
+  ~~~
+
+    - E.x de `import`:  
+  ~~~JavaScript
+    import { CgSearch } from 'react-icons/cg' 
+  ~~~
+  
+&nbsp;
+
 
 ---
 # Aulas :
@@ -69,3 +91,16 @@
   - Aprendemos como configurar e utilizar os imports absolutos para evitar voltar muitas pastas ao importar um arquivo.
 - Utilizar a biblioteca reset css para resetar o css;
   - Resetamos os estilos da nossa página utilizando uma biblioteca chamada reset.css que nos ajuda a limpar os estilos padrões de cada elemento de acordo com cada navegador.
+
+### Aula 3:
+
+- Importar fontes externas
+  - Aprendemos como importar fontes externas no nosso projeto utilizando o google fonts.
+- Utilizar o normalize.css
+  - Utilizamos o normalize.css para padronizar os estilos da página html em cada navegador.
+- Utilizar ícones
+  - Aprendemos como é fácil utilizar ícones com a biblioteca react-icons.
+- Ignorar arquivos para build
+  - Vimos como ignorar arquivos no momentos de build para que sejam utilizados apenas quando os chamar.
+- Criar variáveis css
+  - Criamos variáveis css para nos auxiliar na padronização dos estilos da página, evitando repetição e facilitando na manutenção de código.
