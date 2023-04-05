@@ -74,7 +74,66 @@
 &nbsp;
 
 
+## `type` / `typeof`:
+  > Como interface das opções de filtros foi utilizado um `type` passando um `typeof` do JSON filtros.
+
+  >Assim o type ja codificou a interface com tudo que tinha no JSON e deixando facil de atualizar, pois caso o JSON mude a interface tambem vai mudar.
+
+  - E.x:
+
+  ~~~JavaScript
+    type IOpcao = typeof filtros[0]; 
+  ~~~
+
+&nbsp;
+
+## `classNames`:
+  > Biblioteca utilizada para fazer a concatenação dos styles do projeto
+
+  - Instalando a biblioteca com o comando:
+
+  ~~~JavaScript
+    npm i classnames
+  ~~~
+
+ - Import:
+
+  ~~~JavaScript
+    import classNames from 'classnames';
+  ~~~
+
+&nbsp;
+
+## `!aberto`:
+  > Com um valor booleano que precisa manter um estado (`useState`) e possivel por no set um `!valor`, pois assim ele vai setar o valos oposto ao que ja se encontra.
+
+  - E.x :
+
+  ~~~JavaScript
+    const [aberto, setAberto] = useState(false);
+
+    onClick={() => setAberto(!aberto)}
+  ~~~ 
+
+&nbsp;
+
+## Menu aberto e fechado:
+  > Com o css selecionamos o display aberto ou fechado do elemento com um booleano e dando `onClick` e `onBlur`
+
+  - E.x :
+
+  ~~~JavaScript
+    <button 
+      className={styles.ordenador} 
+      onClick={() => setAberto(!aberto)}
+      onBlur={() => setAberto(false)}
+    >
+  ~~~ 
+
+&nbsp;
+
 ---
+
 # Aulas :
 
 ### Aula 1:
@@ -107,3 +166,13 @@
   - Vimos como ignorar arquivos no momentos de build para que sejam utilizados apenas quando os chamar.
 - Criar variáveis css
   - Criamos variáveis css para nos auxiliar na padronização dos estilos da página, evitando repetição e facilitando na manutenção de código.
+
+### Aula 4:
+
+- Inferir o tipo de um objeto
+  - O operador typeof nos permite inferir a tipagem de um objeto sem a necessidade de criar uma interface.
+- Manipulação de objetos
+  - Utilizamos [] em volta do nome da chave de um objeto quando o valor da chave é dinâmico.
+- Biblioteca classnames
+  - Essa biblioteca nos permite concatenar classes CSS utilizando sintaxe de objetos.
+

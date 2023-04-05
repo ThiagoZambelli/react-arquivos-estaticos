@@ -9,7 +9,8 @@ interface IBuscador {
 function Buscador({busca, setBusca }: IBuscador) {
   return (
     <div className={styles.buscador}>
-      <input 
+      <input
+        placeholder='Buscar'
         value={busca}
         onChange={(evento) => setBusca(evento.target.value)}
       />
