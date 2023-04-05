@@ -1,23 +1,27 @@
 @import "styles/variaveis";
 @import "styles/breakpoints";
 
-$massas: #d73b3b;
-$carnes: #30201e;
-$combos: #e6c864;
+$massas: #EEA7A7;
+$carnes: #6B4B4B;
+$combos: #6B6B6B;
 $veganos: #80aa40;
 
 .item {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
+  padding: .5rem 1rem;
+  border-radius: 15px;
+  transition: 0.5s;
   &__imagem {
-    min-width: 240px;
+    min-width: 240px;    
     @media (max-width: $desktop_xsm) {
       width: 100%;
     }
     img {
       border-radius: 8px;
       width: 100%;
+      box-shadow: 0 0 10px $cor-destaque;
     }
   }
   &__descricao {
@@ -96,7 +100,12 @@ $veganos: #80aa40;
     justify-content: center;
   }
   &__valor {
-    color: $red;
+    color: $cor-destaque;
     font-size: 1.7rem;
   }
+  
+}
+.item:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 5px $cor-base;
 }

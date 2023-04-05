@@ -271,4 +271,4 @@
 - Manipular elementos de uma lista
   - Alterar a quantidade ou ordenar os elementos de uma lista com métodos filter e sort.
 - Tipar o useState
-  - Escrever useState<Tipo> para tipar o state e o setState.
+  - Escrever useState <Tipo> para tipar o state e o setState.
