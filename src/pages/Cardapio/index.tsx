@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from 'assets/logoLithtleZ.svg'
 import { useState } from 'react'
 import Filtros from './Filtros';
 import Ordenador from './Ordenador';
+import Itens from './Itens';
 
 
 function Cardapio() {
@@ -35,6 +36,11 @@ function Cardapio() {
               setOrdenador={setOrdenador}
             />
         </div>
+        <Itens 
+          ordenador={ordenador}
+          filtro={filtro}
+          busca={busca}
+        />
       </section>
     </main>
   )

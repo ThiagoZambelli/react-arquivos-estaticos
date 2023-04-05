@@ -132,6 +132,85 @@
 
 &nbsp;
 
+## Passando um Obj inteiro como prop:
+  > Para passar todo o Obj como prop, basta dar um spread dele dentro do componente
+
+  - E.x :
+
+  ~~~JavaScript
+     {cardapio.map((item)=> (
+            <Item 
+              key={item.id}
+              {...item}
+            />
+      ))}
+  ~~~ 
+
+&nbsp;
+
+## `npm run build`
+  > O npm run build, gera uma pasta de build dentro do projeto, o que é muito util para verificar como as coisas estao sendo passadas e montadas na hora de rodar o codigo.
+
+  - E.x :
+
+  ~~~JavaScript
+     npm run build
+  ~~~ 
+
+&nbsp;
+
+## Filtros -> Filtro:
+  > Usa um ID de filtro em botoes, com um useEffect escutando, para ordenar a lista de itens a ser renderizado pelos IDs de filtro.
+
+  - E.x :
+
+  ~~~JavaScript
+      function testaFiltro(id: number) {
+        if(filtro !== null) return filtro === id;
+        return true;
+      }
+  ~~~ 
+
+&nbsp;
+
+## Filtros -> Busca:
+  > O filtro de busca, passa o useEffects com um escutador no Busca do imput (que é um useState) para filtrar a lista de itens a ser renderizados
+
+  - E.x :
+
+  ~~~JavaScript
+     function testaBusca(title: string) {
+        const regex = new RegExp(busca, 'i');
+        return regex.test(title);
+      }
+  ~~~ 
+  > P.s.: O `'i'` dentro do `RegExp` é para ignirar o toUpercase
+
+&nbsp;
+
+
+## Filtros -> Ordenador:
+  > O filtro de ordenador usa um `useEffects` escutando o Ordenador e passa toda a lista que ira ser renderizada por um `switch/case` e retornando uma nova lista ordenada (ou a original no caso do default)
+
+  - E.x :
+
+  ~~~JavaScript
+     function ordenar(novaLista: typeof cardapio){
+        switch(ordenador){
+          case 'porcao':
+            return novaLista.sort((a, b) => a.size > b.size ? 1 : -1);
+          case 'qtd_pessoas':
+            return novaLista.sort((a,b)=> a.serving > b.serving ? 1 : -1)
+          case 'preco':
+              return novaLista.sort((a,b)=> a.price > b.price ? 1 : -1)
+          default:
+            return novaLista
+        }
+      }
+  ~~~ 
+
+&nbsp;
+
 ---
 
 # Aulas :
@@ -176,3 +255,20 @@
 - Biblioteca classnames
   - Essa biblioteca nos permite concatenar classes CSS utilizando sintaxe de objetos.
 
+### Aula 4:
+
+- Renderizar uma lista de componentes
+  - Podemos utilizar o spread operator para não precisar passar as props manualmente quando temos total controle do componente.
+- Utilizar a pasta public
+  - Arquivos estáticos que devem ser referenciados dinamicamente precisam estar dentro dessa pasta.
+- Gerar os arquivos utilizados em produção
+  - Com o comando npm run build podemos verificar quais arquivos estarão presentes no ambiente de produção.
+
+### Aula 4:
+
+- Buscar com expressão regular
+  - Utilizar expressões regulares em buscas de textos.
+- Manipular elementos de uma lista
+  - Alterar a quantidade ou ordenar os elementos de uma lista com métodos filter e sort.
+- Tipar o useState
+  - Escrever useState<Tipo> para tipar o state e o setState.
